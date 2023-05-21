@@ -14,16 +14,6 @@ Next, add the following features:
 
 var speed = 50;
 
-document.getElementById('left').addEventListener('click', () => {
-puck_x -= speed;
-puck.style.left = puck_x + 'px';
-});
-
-document.getElementById('right').addEventListener('click', () => {
-puck_x += speed;
-puck.style.left = puck_x + 'px';
-});
-
 function checkCollision() {
 
     console.log('check');
@@ -36,9 +26,12 @@ function checkCollision() {
 function checkCollision() {
     if (puck_x >= 250 && puck_x >= 250) {
      console.log('collision!');
+     document.getElementById('gap').style.backgroundColor = 'red';
      }
+     else  document.getElementById('gap').style.backgroundColor = 'white';
     }
-    
+
+
 var puck = document.getElementById('puck');
 
 var puck_x = 210;
